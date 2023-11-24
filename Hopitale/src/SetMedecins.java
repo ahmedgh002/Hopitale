@@ -14,7 +14,7 @@ public class SetMedecins {
     }
     /* Avec l’api Stream */
     public boolean rechercherMedecin(int cin) {
-       return setM.stream().allMatch(setM-> setM.getCin() == cin);
+       return setM.stream().anyMatch(setM-> setM.getCin() == cin);
     }
     /* Avec l’api Stream */
     public void afficherMedecins() {
