@@ -15,11 +15,11 @@ public class ListPatients implements InterfacePatient{
     }
     /* Avec l’api Stream */
     public boolean rechercherPatient(Patient p){
-        return listP.stream().allMatch(patient -> patient.equals(p));
+        return listP.stream().anyMatch(patient -> patient.equals(p));
     }
     /* Avec l’api Stream */
     public boolean rechercherPatient(int cin) {
-        return listP.stream().allMatch(patient -> patient.getCin() == cin);
+        return listP.stream().anyMatch(patient -> patient.getCin() == cin);
     }
     public void afficherPatients() {
         listP.stream().forEach(p->listP.toString());
